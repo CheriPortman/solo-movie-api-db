@@ -1,0 +1,29 @@
+#header-bar {
+    display: flex;
+    background: #c94b0c;
+    justify-content: space-between;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 6em;
+    align-self: center;
+    padding: 15px;
+}
+
+#popcorn {
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 20vh;
+    align-self: center;
+    margin: 5px;
+}
+
+#profile-display {
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 20vh;
+    background-color: #8b8b70;
+    align-self: center;
+    margin: 5px;
+}
