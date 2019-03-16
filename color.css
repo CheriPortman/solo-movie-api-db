@@ -1,0 +1,53 @@
+#color-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#renovations {
+    border: 3px solid black;
+    font-size: 2em;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background: #5a372c;
+}
+
+#workaholic {
+    border: 3px solid black;
+    font-size: 2em;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background: #8b8b70;
+}
+
+#freshen-up {
+    border: 3px solid black;
+    font-size: 2em;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background: #98c7b0;
+}
+
+#aglet {
+    border: 3px solid black;
+    font-size: 2em;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background: #f0f0d8;
+}
+
+#refurbish {
+    border: 3px solid black;
+    font-size: 2em;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background: #c94b0c;
+}
