@@ -10,3 +10,12 @@ export function writePageToQuery(existingQuery, page) {
     searchParams.set('page', page);
     return searchParams.toString();
 }
+
+export function readFromQuery(query) {
+    const searchParams = new URLSearchParams(query);
+    const queryOptions = {
+        searchTerm: searchParams.get('searchTerm'),
+        page: parseInt(searchParams.get('page')) || 1
+    };
+    return queryOptions;
+}

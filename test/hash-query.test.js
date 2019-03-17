@@ -1,4 +1,4 @@
-import { writeSearchToQuery, writePageToQuery } from '../src/hash-query.js';
+import { writeSearchToQuery, writePageToQuery, readFromQuery } from '../src/hash-query.js';
 
 const test = QUnit.test;
 QUnit.module('hash query');
@@ -36,7 +36,7 @@ test('write page to existing query', assert => {
 
 test('write page to existing query', assert => {
     //arrange
-    const existingQuery = 'searchTerm=star+wars&page=1';
+    const query = 'searchTerm=star+wars&page=3';
     const expected = {
         searchTerm: 'star wars',
         page: 3
