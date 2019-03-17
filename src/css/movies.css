@@ -1,0 +1,41 @@
+#movie-list {
+    display: flex;
+
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #8b8b70;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #5a372c;
+    border-radius: 5px;
+}
+
+.movie .genre {
+    align-self: flex-start;
+    font-size: .8em;
+}
+
+.movie .movie-title {
+    padding: 2px;
+}
+
+.movie img {
+    border: 2px solid black;
+}
+
+.movie .tagline {
+    flex-wrap: wrap;
+    padding: 3px;
+    font-weight: bolder;
+}
+
+.movie .year {
+    font-weight: bold;
+}
+
