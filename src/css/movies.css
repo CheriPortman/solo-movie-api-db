@@ -17,8 +17,9 @@
     border-radius: 5px;
 }
 
-.movie .movie-title {
-    padding: 2px;
+.movie h2 {
+    text-align: center;
+    padding: 5px;
 }
 
 .movie img {
@@ -26,13 +27,8 @@
     width: 80%;
 }
 
-.movie .tagline {
-    flex-wrap: wrap;
-    padding: 3px;
-    font-weight: bolder;
-}
-
 .movie .year {
     font-weight: bold;
+    margin: 5px;
 }
 
