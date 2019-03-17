@@ -11,3 +11,15 @@ export function writeOptionsAsQuery(searchOptions, pagingOptions) {
 
     return '?' + searchParams.toString();
 }
+
+export function readQueryAsOptions(query) {
+    const searchParams = new URLSearchParams(query);
+    const searchTerm = searchParams.get('searchTerm');
+    const page = parseInt(searchParams.get('page'));
+
+    const queryOptions = {
+        search: { term: searchTerm || '' },
+        paging: { page: page || 1 }
+    };
+    return queryOptions;
+}
