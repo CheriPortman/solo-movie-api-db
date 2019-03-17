@@ -8,3 +8,25 @@ body {
     background-color: #98c7b0;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #c94b0c;
+    border-top: 3px solid #5a372c;
+    border-bottom: 3px solid #5a372c;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+}
+
+#logo {
+    height: 25px;
+    padding: 5px;
+}
+
+.footer-text {
+    display: inline-block;
+    font-weight: bold;
+}
