@@ -16,11 +16,6 @@
     border-radius: 5px;
 }
 
-.movie .genre {
-    align-self: flex-start;
-    font-size: .8em;
-}
-
 .movie .movie-title {
     padding: 2px;
 }
