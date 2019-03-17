@@ -1,21 +1,7 @@
-
+import writeOptionsAsQuery from '../src/write-options-as-query.js';
 
 const test = QUnit.test;
 QUnit.module('write options to hash');
-
-function writeOptionsAsQuery(searchOptions, pagingOptions) {
-    if(!searchOptions.term) {
-        return '';
-    }
-
-    const searchParams = new URLSearchParams();
-    searchParams.set('searchTerm', searchOptions.term);
-    if(pagingOptions) {
-        searchParams.set('page', pagingOptions.page);
-    }
-
-    return '?' + searchParams.toString();
-}
 
 test('makes query search term', assert => {
     //arrange
