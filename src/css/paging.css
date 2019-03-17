@@ -1,4 +1,4 @@
-#paging {
+#paging-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,11 +6,11 @@
     padding: 7px;
 }
 
-#paging.hidden {
+#paging-section.hidden {
     display: none;
 }
 
-#paging button {
+#paging-section button {
     background-color: #8b8b70;
     border: 2px solid #5a372c;
     border-radius: 5px;
