@@ -3,7 +3,7 @@ import makeSearchAPIUrl from '../src/movies/make-search-api-url.js';
 const test = QUnit.test;
 QUnit.module('make search url');
 
-test('includes encoded search term', assert => {
+test('includes encoded search term, defaults to page 1', assert => {
     const queryOptions = {
         search: { term: 'star wars' }
     };
@@ -15,9 +15,10 @@ test('includes encoded search term', assert => {
     assert.equal(result, expected);
 });
 
-test('return null if no search', assert => {
+test('includes encoded search term and page', assert => {
     const queryOptions = {
-        search: { term: '' }
+        search: { term: '' },
+        page: { page: 3 }
     };
     const resultUrl = makeSearchAPIUrl(queryOptions);
 

@@ -6,8 +6,10 @@ export default function makeSearchAPIUrl(queryOptions) {
     const searchTerm = searchOptions.term;
     if(!searchTerm) return '';
 
+    const pagingOptions = queryOptions.paging;
+
     const query = encodeURIComponent(searchOptions.term);
-    const page = 1;
+    const page = pagingOptions ? pagingOptions.page : 1;
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`;
     return url;
 }
