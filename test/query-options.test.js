@@ -1,22 +1,28 @@
 import { writeOptionsAsQuery, readQueryAsOptions } from '../src/query-options.js';
 
 const test = QUnit.test;
-QUnit.module('write options to hash');
+QUnit.module('query options');
 
-test('makes query search term', assert => {
+test('writes query search term', assert => {
     //arrange
-    const searchOptions = { term: 'star wars' };
+    const queryOptions = { 
+        search: { term: 'star wars' }
+    };
     //act
-    const query = writeOptionsAsQuery(searchOptions);
+    const query = writeOptionsAsQuery(queryOptions);
     //assert
     assert.equal(query, '?searchTerm=star+wars');
 });
 
-test('makes query for search and paging', assert => {
-    const searchOptions = { term: 'star wars' };
-    const pagingOptions = { page: 1 };
+test('writes query for search and paging', assert => {
+    const queryOptions = {
+        search: { term: 'star wars' },
+        paging: { page: 1 }
+    };
+    // const searchOptions = { term: 'star wars' };
+    // const pagingOptions = { page: 1 };
     //act
-    const query = writeOptionsAsQuery(searchOptions, pagingOptions);
+    const query = writeOptionsAsQuery(queryOptions);
 
     assert.equal(query, '?searchTerm=star+wars&page=1');
 

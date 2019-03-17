@@ -1,10 +1,13 @@
-export function writeOptionsAsQuery(searchOptions, pagingOptions) {
+export function writeOptionsAsQuery(queryOptions) {
+    const searchOptions = queryOptions.search;
     if(!searchOptions.term) {
         return '';
     }
 
     const searchParams = new URLSearchParams();
     searchParams.set('searchTerm', searchOptions.term);
+
+    const pagingOptions = queryOptions.paging;
     if(pagingOptions) {
         searchParams.set('page', pagingOptions.page);
     }
