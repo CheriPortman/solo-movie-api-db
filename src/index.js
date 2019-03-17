@@ -1,15 +1,28 @@
-// import loadMovieCards from './movies/movie-cards-component.js';
+import loadMovieCards from './movies/movie-cards-component.js';
 
 import { updateSearchTerm } from './movies/search-component.js';
-
 import { readFromQuery } from './hash-query.js';
+import makeSearchMovieUrl from './movies/make-search-movie-url.js';
 
 window.addEventListener('hashchange', () => {
     const query = window.location.hash.slice(1);
     const queryOptions = readFromQuery(query);
-    console.log(queryOptions);
     updateSearchTerm(queryOptions.searchTerm);
+
+    const url = makeSearchMovieUrl(queryOptions);
+
+    fetch(url)
+        .then(response => response.json())
+        .then(body => {
+            loadMovieCards(body.results);
+        });
 });
+
+
+//TODO: guard against empty search
+//if(!url) {
+//  return;
+// }
 
 
 // import loadPaging, { updatePagingInfo } from './paging-component.js';

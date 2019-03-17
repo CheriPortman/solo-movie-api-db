@@ -1,4 +1,4 @@
-import { makeSearchMovieUrl } from '../src/movies/make-search-api-url.js';
+import makeSearchMovieUrl from '../src/movies/make-search-movie-url.js';
 
 const test = QUnit.test;
 QUnit.module('make search movie url');
