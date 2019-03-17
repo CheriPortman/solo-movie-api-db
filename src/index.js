@@ -1,4 +1,5 @@
 import loadMovieCards from './movies/movie-cards-component.js';
+import './search-component.js';
 // import loadPaging, { updatePagingInfo } from './paging-component.js';
 // import makeSearchAPIUrl from './movies/make-search-api-url.js';
 // import loadSearch, { updateSearchTerm } from './movies/search-component.js';

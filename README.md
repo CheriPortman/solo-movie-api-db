@@ -1,5 +1,5 @@
 # solo-movie-api-db
-
+## note: this lab was done following instructor commits. it isn't original or independent work.
 
 ## TODO
 ### *make loadFooter using:  This product uses the TMDb API but is not endorsed or certified by TMDb.
