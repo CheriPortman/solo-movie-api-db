@@ -1,4 +1,4 @@
-import writeOptionsAsQuery from '../src/write-options-as-query.js';
+import { writeOptionsAsQuery } from '../src/query-options.js';
 
 const test = QUnit.test;
 QUnit.module('write options to hash');

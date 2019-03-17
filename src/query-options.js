@@ -1,4 +1,4 @@
-export default function writeOptionsAsQuery(searchOptions, pagingOptions) {
+export function writeOptionsAsQuery(searchOptions, pagingOptions) {
     if(!searchOptions.term) {
         return '';
     }
