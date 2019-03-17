@@ -11,9 +11,7 @@ test('makeMovieCard', assert => {
         <li class="movie">
             <h2 class="movie-title">Fight Club</h2>
             <img src="https://image.tmdb.org/t/p/w92/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg" alt="poster of Fight Club">
-            <span class="tagline">Mischief. Mayhem. Soap.</span>
-            <span class="year">1999</span>
-            <span class="runtime">139 minutes</span>
+            <span class="year">Released: 1999</span>
         </li>
     `;
     //act

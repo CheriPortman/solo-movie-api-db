@@ -1,4 +1,4 @@
-const SEARCH_MOVIE_URL = "https://api.themoviedb.org/3/search/movie";
+const SEARCH_MOVIE_URL = 'https://api.themoviedb.org/3/search/movie';
 const API_KEY = '869a081d5dda9c543281108989ab148e';
 
 const url = new URL(SEARCH_MOVIE_URL);
