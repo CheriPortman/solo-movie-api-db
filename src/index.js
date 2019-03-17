@@ -1,6 +1,6 @@
 import loadMovieCards from './movies/movie-cards-component.js';
 import { updateSearchTerm } from './movies/search-component.js';
-import './paging-component.js';
+import { updatePagingInfo } from './paging-component.js';
 import { readFromQuery } from './hash-query.js';
 import makeSearchMovieUrl from './movies/make-search-movie-url.js';
 
@@ -20,6 +20,11 @@ window.addEventListener('hashchange', () => {
         .then(response => response.json())
         .then(body => {
             loadMovieCards(body.results);
+            const pagingInfo = {
+                page: body.page,
+                totalPages: body.total_pages
+            };
+            updatePagingInfo(pagingInfo);
         });
 });
 
