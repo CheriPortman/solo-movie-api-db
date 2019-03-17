@@ -1,5 +1,5 @@
 import movie from '../data/example-data.js';
-import { makeMovieCard } from '../movies/movie-cards-component.js';
+import { makeMovieCard } from '../src/movies/movie-cards-component.js';
 
 const test = QUnit.test;
 

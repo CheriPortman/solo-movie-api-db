@@ -6,6 +6,10 @@
     padding: 7px;
 }
 
+#paging.hidden {
+    display: none;
+}
+
 #paging button {
     background-color: #8b8b70;
     border: 2px solid #5a372c;

@@ -18,9 +18,15 @@ export function makeMovieCard(movie) {
 const movieList = document.getElementById('movie-list');
 
 export default function loadMovieCards(movies) {
+    clearMovies();
     movies.forEach(movie => {
         const dom = makeMovieCard(movie);
         movieList.appendChild(dom);
     });
 }
 
+function clearMovies() {
+    while(movieList.children.length > 0) {
+        movieList.lastElementChild.remove();
+    }
+}

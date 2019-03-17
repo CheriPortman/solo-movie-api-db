@@ -1,12 +1,13 @@
 import loadMovieCards from './movies/movie-cards-component.js';
+import makeSearchUrl from './movies/movie-cards-component.js';
+import loadSearch from './movies/search-component.js';
 
-const API_KEY = '869a081d5dda9c543281108989ab148e';
-const query = encodeURIComponent('Lord of the Rings');
-const page = 1;
-const URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`;
+loadSearch(searchOptions => {
+    const url = makeSearchUrl(searchOptions);
 
-fetch(URL)
-    .then(response => response.json())
-    .then(response => {
-        loadMovieCards(response.results);
-    });
+    fetch(url)
+        .then(response => response.json())
+        .then(response => {
+            loadMovieCards(response.results);
+        });
+});
