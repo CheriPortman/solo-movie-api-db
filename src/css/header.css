@@ -2,6 +2,8 @@
     display: flex;
     background: #c94b0c;
     justify-content: space-between;
+    border-bottom: 3px solid #5a372c;
+    border-top: 3px solid #5a372c;
 }
 
 h1 {
