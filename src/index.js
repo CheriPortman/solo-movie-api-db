@@ -1,6 +1,6 @@
 import loadMovieCards from './movies/movie-cards-component.js';
-
 import { updateSearchTerm } from './movies/search-component.js';
+import './paging-component.js';
 import { readFromQuery } from './hash-query.js';
 import makeSearchMovieUrl from './movies/make-search-movie-url.js';
 
@@ -10,6 +10,11 @@ window.addEventListener('hashchange', () => {
     updateSearchTerm(queryOptions.searchTerm);
 
     const url = makeSearchMovieUrl(queryOptions);
+    
+    //TODO: guard against empty search
+    //if(!url) {
+    //  return;
+    // }
 
     fetch(url)
         .then(response => response.json())
@@ -19,10 +24,6 @@ window.addEventListener('hashchange', () => {
 });
 
 
-//TODO: guard against empty search
-//if(!url) {
-//  return;
-// }
 
 
 // import loadPaging, { updatePagingInfo } from './paging-component.js';
