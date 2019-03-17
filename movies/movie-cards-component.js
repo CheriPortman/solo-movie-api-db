@@ -15,3 +15,12 @@ export function makeMovieCard(movie) {
     return template.content;
 }
 
+const movieList = document.getElementById("movie-list");
+
+export default function loadMovieCards(movies) {
+    const movie = movies.forEach(movie => {
+        const dom = makeMovieCard(movie);
+        movieList.appendChild(dom);
+    });
+}
+
