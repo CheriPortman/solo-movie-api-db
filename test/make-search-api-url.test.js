@@ -14,3 +14,12 @@ test('includes encoded search term', assert => {
 
     assert.equal(result, expected);
 });
+
+test('return null if no search', assert => {
+    const queryOptions = {
+        search: { term: '' }
+    };
+    const resultUrl = makeSearchAPIUrl(queryOptions);
+
+    assert.equal(resultUrl, '');
+});
