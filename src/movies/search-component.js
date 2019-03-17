@@ -1,11 +1,11 @@
 const searchForm = document.getElementById('search-form');
+const searchTermInput = searchForm.querySelector('input');
 
 export default function loadSearch(callback) {
     searchForm.addEventListener('submit', event => {
         event.preventDefault();
 
-        const formData = new FormData(searchForm);
-        const searchTerm = formData.get('search-term');
+        const searchTerm = searchTermInput.value;
 
         if(searchTerm.trim() === '') {
             return;
@@ -17,4 +17,8 @@ export default function loadSearch(callback) {
 
         callback(searchOptions);
     });
+}
+
+export function updateSearchTerm(searchOptions) {
+    searchTermInput.value = searchOptions.term;
 }
