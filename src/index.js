@@ -1,5 +1,17 @@
-import loadMovieCards from './movies/movie-cards-component.js';
-import './search-component.js';
+// import loadMovieCards from './movies/movie-cards-component.js';
+
+import { updateSearchTerm } from './movies/search-component.js';
+
+import { readFromQuery } from './hash-query.js';
+
+window.addEventListener('hashchange', () => {
+    const query = window.location.hash.slice(1);
+    const queryOptions = readFromQuery(query);
+    console.log(queryOptions);
+    updateSearchTerm(queryOptions.searchTerm);
+});
+
+
 // import loadPaging, { updatePagingInfo } from './paging-component.js';
 // import makeSearchAPIUrl from './movies/make-search-api-url.js';
 // import loadSearch, { updateSearchTerm } from './movies/search-component.js';

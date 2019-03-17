@@ -1,4 +1,4 @@
-import { writeSearchToQuery } from './hash-query.js';
+import { writeSearchToQuery } from '../hash-query.js';
 
 const searchForm = document.getElementById('search-form');
 const searchTermInput = searchForm.querySelector('input');
@@ -10,3 +10,7 @@ searchForm.addEventListener('submit', event => {
     const newQuery = writeSearchToQuery(existingQuery, searchTerm);
     window.location.hash = newQuery;
 });
+
+export function updateSearchTerm(searchTerm) {
+    searchTermInput.value = searchTerm;
+}
