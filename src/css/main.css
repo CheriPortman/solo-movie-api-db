@@ -8,6 +8,17 @@ body {
     background-color: #98c7b0;
 }
 
+#prompt {
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.hidden {
+    display: none;
+}
+
 footer {
     display: flex;
     align-items: center;

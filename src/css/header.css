@@ -22,6 +22,7 @@ h1 {
 }
 
 #profile-display {
+    display: flex;
     border: 3px solid #5a372c;
     border-radius: 15px;
     height: 20vh;

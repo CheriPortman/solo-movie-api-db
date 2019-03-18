@@ -4,6 +4,9 @@ import { updatePagingInfo } from './paging-component.js';
 import { readFromQuery } from './hash-query.js';
 import makeSearchMovieUrl from './movies/make-search-movie-url.js';
 
+const prompt = document.getElementById('prompt');
+const moviesContainer = document.getElementById('movies-container');
+
 window.addEventListener('hashchange', loadQuery);
 
 loadQuery();
@@ -17,7 +20,10 @@ function loadQuery() {
     
     if(!url) {
         return;
-        //TODO: reset movies and paging to hidden
+    } 
+    else {
+        prompt.classList.add('hidden');
+        moviesContainer.classList.remove('hidden');
     }
 
     fetch(url)
