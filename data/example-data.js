@@ -87,6 +87,6 @@ const movie =
         'video': false,
         'vote_average': 8.4,
         'vote_count': 15607
-    }
+    };
 
 export default movie;

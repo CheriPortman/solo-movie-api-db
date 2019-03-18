@@ -26,7 +26,7 @@ test('write search to existing query changes search and resets page', assert => 
 test('write page to existing query', assert => {
     //arrange
     const existingQuery = 'searchTerm=star+wars&page=1';
-    const page =3;
+    const page = 3;
     const expected = 'searchTerm=star+wars&page=3';
     //act
     const query = writePageToQuery(existingQuery, page);
