@@ -32,8 +32,12 @@
     margin: 5px;
 }
 
-/* #list-detail-container {
+.movie.selected {
+    background: #c94b0c;
+}
+
+#list-detail-container {
     display: grid;
     grid-template-columns: 1fr 300px;
-} */
+}
 
