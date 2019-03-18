@@ -1,12 +1,12 @@
-import loadMovieCards, { updateMovies } from './movies/movie-cards-component.js';
+import loadMovies, { updateMovies } from './movies/movie-cards-component.js';
+import loadMovieDetail from './movie-detail/movie-detail-component.js';
 import { updateSearchTerm } from './movies/search-component.js';
 import { updatePagingInfo } from './paging-component.js';
 import { readFromQuery } from './hash-query.js';
 import makeSearchMovieUrl from './movies/make-search-movie-url.js';
-import loadMovies from './movies/movie-cards-component.js';
 
 loadMovies(movie => {
-    console.log('would show detail for:', movie);
+    loadMovieDetail(movie);
 });
 
 const prompt = document.getElementById('prompt');

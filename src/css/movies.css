@@ -39,5 +39,20 @@
 #list-detail-container {
     display: grid;
     grid-template-columns: 1fr 300px;
+    border: 3px solid #5a372c;
+}
+
+#detail-article {
+    border: 3px solid #5a372c;
+    padding: 5px;
+    margin: 5px;
+    background: #c94b0c;
+    border-radius: 5px;
+}
+
+#detail-article img {
+    width: 100%;
+    border: 2px solid #5a372c;
+    border-radius: 5px;
 }
 

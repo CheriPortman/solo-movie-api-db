@@ -22,7 +22,6 @@ export function makeMovieCard(movie) {
 }
 
 const movieList = document.getElementById('movie-list');
-
 let selectCallback = null;
 
 export default function loadMovies(callback) {
