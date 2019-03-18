@@ -30,21 +30,30 @@
 
         <p id="prompt">To find a flick, you much search!</p>
 
-        <div id="movies-container" class="hidden">
+        <div id="movie-list-container" class="hidden">
             <section id="paging-section">
                 <button id="previous-button">&lt; Previous</button>
                 <div>
                     Page
                     <span id="current-page">1</span>
                     of
-                    <span id="total-pages">X</span>
+                    <span id="total-pages"></span>
                 </div>
                 <button id="next-button">Next &gt;</button>
             </section>
-    
-            <ul id="movie-list">
-                <p class="search-prompt">Enter a search to find your flicks!</p>
-            </ul>
+            <div id="list-detail-container">
+                <ul id="movie-list">
+                    <p class="search-prompt">Enter a search to find your flicks!</p>
+                </ul>
+
+                <section id="detail-container">
+                    <article>
+                        <img src="https://image.tmdb.org/t/p/w300/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg">
+                        <h2>Star Wars</h2>
+                        <p class="description">Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.</p>
+                    </article>
+                </section>
+            </div>
         </div>
     </main>
 
